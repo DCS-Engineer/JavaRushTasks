@@ -9,6 +9,31 @@ public class CarController {
         this.view = view;
     }
 
+    public void speedUp(int seconds) {
+        int speed = model.getSpeed();
+        int maxSpeed = model.getMaxSpeed();
+        if (speed < maxSpeed) {
+            speed += (3.5 * seconds);
+            model.setSpeed(speed);
+        }
+        if (speed > maxSpeed) {
+            speed = maxSpeed;
+            model.setSpeed(speed);
+        }
+    }
+
+    public void speedDown(int seconds) {
+        int speed = model.getSpeed();
+        if (speed > 0) {
+            speed -= (12 * seconds);
+            model.setSpeed(speed);
+        }
+        if (speed < 0) {
+            speed = 0;
+            model.setSpeed(speed);
+        }
+    }
+
     public String getCarBrand() {
         return model.getBrand();
     }
