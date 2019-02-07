@@ -35,6 +35,7 @@ public class Solution {
                                     Constructor constructor = classItem.getDeclaredConstructor();
                                     constructor.setAccessible(true);
                                     List emptyList = (List) constructor.newInstance();
+                                    //
                                     emptyList.get(0);
                                 }
                                 catch (IndexOutOfBoundsException e){
