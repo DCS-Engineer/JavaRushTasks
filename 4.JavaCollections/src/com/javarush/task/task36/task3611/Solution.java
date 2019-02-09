@@ -22,6 +22,9 @@ public class Solution {
 
     public Set<Integer> getAllFriendsAndPotentialFriends(int index, int deep) {
         //напишите тут ваш код
+        Set<Integer> integers = new HashSet<>();
+
+        return integers;
     }
 
     // Remove from the set the people with whom you already have a relationship
