@@ -40,7 +40,6 @@ public class Solution {
         if (!(packageName.endsWith(sep))){
             pathName = pathName.concat(sep);
         }
-        System.out.println(pathName);
         File[] files = new File(pathName).listFiles();
         MyLoader loader = new MyLoader();
         for (File file: files) {
