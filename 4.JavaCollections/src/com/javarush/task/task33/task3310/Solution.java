@@ -41,14 +41,14 @@ public class Solution {
         long startMillsGetIds = new Date().getTime();
         Set<Long> keys = getIds(shortener, strings);
         long stopMillsGetIds = new Date().getTime();
-        System.out.println(String.format("Время выполнения метода getIds, %1$d мс", (stopMillsGetIds - startMillsGetIds)));
+        Helper.printMessage(String.format("Время выполнения метода getIds, %1$d мс", (stopMillsGetIds - startMillsGetIds)));
         long startMillsGetStrings = new Date().getTime();
         Set<String> stringSet = getStrings(shortener, keys);
         long stopMillsGetStrings = new Date().getTime();
-        System.out.println(String.format("Время выполнения метода getStrings, %1$d мс", (stopMillsGetStrings - startMillsGetStrings)));
+        Helper.printMessage(String.format("Время выполнения метода getStrings, %1$d мс", (stopMillsGetStrings - startMillsGetStrings)));
         if ((strings.size() == stringSet.size()) & (strings.equals(stringSet))){
-            System.out.println("Тест пройден.");
+            Helper.printMessage("Тест пройден.");
         }
-        else System.out.println("Тест не пройден.");
+        else Helper.printMessage("Тест не пройден.");
     }
 }
