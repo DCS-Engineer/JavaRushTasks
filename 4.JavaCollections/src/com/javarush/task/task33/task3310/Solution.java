@@ -13,6 +13,7 @@ public class Solution {
         testStrategy(new FileStorageStrategy(), 100L);
         testStrategy(new OurHashBiMapStorageStrategy(), 10000L);
         testStrategy(new HashBiMapStorageStrategy(), 10000L);
+        testStrategy(new DualHashBidiMapStorageStrategy(), 10000L);
     }
 
     public static Set<Long> getIds(Shortener shortener, Set<String> strings){
