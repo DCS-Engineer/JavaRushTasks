@@ -7,10 +7,8 @@ import java.util.Date;
 import java.util.Set;
 
 public class LogParser implements IPQuery {
-    private Path logDir;
 
     public LogParser(Path logDir) {
-        this.logDir = logDir;
     }
 
     @Override
