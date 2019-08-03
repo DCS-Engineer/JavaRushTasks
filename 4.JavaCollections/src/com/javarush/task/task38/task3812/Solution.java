@@ -14,10 +14,24 @@ public class Solution {
     }
 
     public static boolean printFullyQualifiedNames(Class c) {
-        return true;
+        if (c.isAnnotationPresent(PrepareMyTest.class)){
+            PrepareMyTest prepareMyTest = (PrepareMyTest) c.getAnnotation(PrepareMyTest.class);
+            for (String item : prepareMyTest.fullyQualifiedNames()) {
+                System.out.println(item);
+            }
+            return true;
+        }
+        return false;
     }
 
     public static boolean printValues(Class c) {
-        return true;
+        if (c.isAnnotationPresent(PrepareMyTest.class)){
+            PrepareMyTest prepareMyTest = (PrepareMyTest) c.getAnnotation(PrepareMyTest.class);
+            for (Class<?> item : prepareMyTest.value()) {
+                System.out.println(item.getSimpleName());
+            }
+            return true;
+        }
+        return false;
     }
 }
